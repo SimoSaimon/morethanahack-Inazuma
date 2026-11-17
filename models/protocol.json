@@ -1,0 +1,83 @@
+{
+  "created": "2026-11-15",
+  "task": "H/A possession conditional on supplied game state; no dead-ball training",
+  "train": [
+    "J03WOH",
+    "J03WOY",
+    "J03WMX",
+    "J03WN1",
+    "J03WR9"
+  ],
+  "validation": [
+    "J03WPY"
+  ],
+  "test": [
+    "J03WQQ"
+  ],
+  "modes": [
+    "clean",
+    "occluded",
+    "severe"
+  ],
+  "train_stride": 5,
+  "selection_fps": 5,
+  "test_fps": 25,
+  "candidates": [
+    "nearest",
+    "nearest_temporal",
+    "symmetric_logistic",
+    "symmetric_boosted_small",
+    "symmetric_boosted_medium",
+    "symmetric_boosted_large",
+    "temporal_cnn"
+  ],
+  "switch_costs": [
+    0.2,
+    0.8,
+    2.0,
+    4.0
+  ],
+  "gap_penalties": [
+    0.0,
+    2.0
+  ],
+  "selection_metric": "mean official spellF1 with oracle game-state gate on external validation modes",
+  "test_used_for_selection": false,
+  "challenge_public_gt_read": false,
+  "symmetry": "team swap complements probabilities; player slot order and field reflections preserve predictions",
+  "state_contract": [
+    "in_play",
+    "stopped",
+    "unknown"
+  ],
+  "ball_smoothing": "gaussian sigma 6 frames inside visible runs, all modes (augmentation.smooth_ball)",
+  "temporal_cnn": {
+    "input": "the same per-frame features as the trees, standardised",
+    "channels": 64,
+    "dilations": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "dropout": 0.1,
+    "chunk_frames": 1500,
+    "batch": 16,
+    "epochs": 10,
+    "weight_decay": 1e-05,
+    "max_lr": 0.003,
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "threads": 8,
+    "switch_costs": [
+      0.2,
+      0.4
+    ],
+    "selection": "mean official spellF1 with oracle game state on the validation modes, every frame at 25 Hz, against the best tree model measured the same way"
+  }
+}

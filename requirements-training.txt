@@ -1,0 +1,8 @@
+-r requirements.txt
+pandas==2.2.3
+scikit-learn==1.9.1
+scipy==1.18.1
+joblib==1.6.0
+threadpoolctl==3.8.0
+# training/train_tcn.py only; CPU build: pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0

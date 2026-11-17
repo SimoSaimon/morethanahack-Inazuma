@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+/data/
+/work/
+/cache/
+/results/
+/dist/
+*.npy
+*.npz
+*.mp4
+*.xml
+*_atd.txt
+ownership.csv
+game_state.csv

@@ -1,0 +1,629 @@
+{
+  "scope": "H/A component with oracle in_play/stopped labels; NOT end-to-end challenge accuracy",
+  "selected_model_frozen_before_test": "temporal_cnn",
+  "frozen_model_sha256": "b1041ca229b3a9b77791d75a44a89264efd86edb68c6d4649646319b01262076",
+  "test_matches": [
+    "J03WQQ"
+  ],
+  "feature_evidence": {
+    "J03WQQ/clean": {
+      "frames": 141898,
+      "live_frames": 84352,
+      "ball_seen_fraction": 1.0,
+      "source": {
+        "source_sha256": "cbefcb0bd7f39f3b94ee69a7bc97aac0f936425062c1cc1b144733df36804d6f",
+        "metadata_sha256": "e976aa0c5dba862cfa898ea57ec226efce9d1bc04b23b8d775908db86aa6fa41",
+        "pitch_m": [
+          105.0,
+          68.0
+        ],
+        "fps": 25,
+        "match_id": "DFL-MAT-J03WQQ",
+        "halves": [
+          {
+            "section": "firstHalf",
+            "source_first_frame": 10000,
+            "frames": 68966,
+            "dead_fraction": 0.3173592784850506,
+            "slots": 22
+          },
+          {
+            "section": "secondHalf",
+            "source_first_frame": 100000,
+            "frames": 72932,
+            "dead_fraction": 0.4889348982613942,
+            "slots": 31
+          }
+        ]
+      }
+    },
+    "J03WQQ/occluded": {
+      "frames": 141898,
+      "live_frames": 84352,
+      "ball_seen_fraction": 0.5459344035856742,
+      "source": {
+        "source_sha256": "cbefcb0bd7f39f3b94ee69a7bc97aac0f936425062c1cc1b144733df36804d6f",
+        "metadata_sha256": "e976aa0c5dba862cfa898ea57ec226efce9d1bc04b23b8d775908db86aa6fa41",
+        "pitch_m": [
+          105.0,
+          68.0
+        ],
+        "fps": 25,
+        "match_id": "DFL-MAT-J03WQQ",
+        "halves": [
+          {
+            "section": "firstHalf",
+            "source_first_frame": 10000,
+            "frames": 68966,
+            "dead_fraction": 0.3173592784850506,
+            "slots": 22
+          },
+          {
+            "section": "secondHalf",
+            "source_first_frame": 100000,
+            "frames": 72932,
+            "dead_fraction": 0.4889348982613942,
+            "slots": 31
+          }
+        ]
+      }
+    },
+    "J03WQQ/severe": {
+      "frames": 141898,
+      "live_frames": 84352,
+      "ball_seen_fraction": 0.2540980140664421,
+      "source": {
+        "source_sha256": "cbefcb0bd7f39f3b94ee69a7bc97aac0f936425062c1cc1b144733df36804d6f",
+        "metadata_sha256": "e976aa0c5dba862cfa898ea57ec226efce9d1bc04b23b8d775908db86aa6fa41",
+        "pitch_m": [
+          105.0,
+          68.0
+        ],
+        "fps": 25,
+        "match_id": "DFL-MAT-J03WQQ",
+        "halves": [
+          {
+            "section": "firstHalf",
+            "source_first_frame": 10000,
+            "frames": 68966,
+            "dead_fraction": 0.3173592784850506,
+            "slots": 22
+          },
+          {
+            "section": "secondHalf",
+            "source_first_frame": 100000,
+            "frames": 72932,
+            "dead_fraction": 0.4889348982613942,
+            "slots": 31
+          }
+        ]
+      }
+    }
+  },
+  "results": {
+    "J03WQQ/clean": {
+      "nearest_carried": {
+        "spellF1_with_oracle_state": 0.11254689453939141,
+        "spellF1_per_iou": {
+          "0.3": 0.2134222592746978,
+          "0.4": 0.15506461025427262,
+          "0.5": 0.10504376823676533,
+          "0.6": 0.06002501042100875,
+          "0.7": 0.02917882451021259
+        },
+        "team_accuracy_on_live": 0.7640719840667678,
+        "team_macroF1_on_live": 0.76188662280818,
+        "n_gt_spells": 401,
+        "n_pred_spells": 1998,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 1.0,
+        "team_accuracy_visible": 0.7640719840667678,
+        "team_accuracy_missing": null
+      },
+      "nearest_temporal": {
+        "spellF1_with_oracle_state": 0.4688705234159779,
+        "spellF1_per_iou": {
+          "0.3": 0.6198347107438017,
+          "0.4": 0.5619834710743802,
+          "0.5": 0.48484848484848486,
+          "0.6": 0.38016528925619836,
+          "0.7": 0.2975206611570248
+        },
+        "team_accuracy_on_live": 0.8194826441578149,
+        "team_macroF1_on_live": 0.8169536032580105,
+        "n_gt_spells": 401,
+        "n_pred_spells": 325,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 1.0,
+        "brier_home_on_live": 0.1649943839188438,
+        "team_accuracy_visible": 0.8194826441578149,
+        "team_accuracy_missing": null
+      },
+      "symmetric_logistic": {
+        "spellF1_with_oracle_state": 0.5397435897435897,
+        "spellF1_per_iou": {
+          "0.3": 0.6410256410256411,
+          "0.4": 0.6153846153846154,
+          "0.5": 0.5512820512820513,
+          "0.6": 0.49038461538461536,
+          "0.7": 0.40064102564102566
+        },
+        "team_accuracy_on_live": 0.8822790212443096,
+        "team_macroF1_on_live": 0.8804398373288775,
+        "n_gt_spells": 401,
+        "n_pred_spells": 223,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 1.0,
+        "brier_home_on_live": 0.0818349649419449,
+        "team_accuracy_visible": 0.8822790212443096,
+        "team_accuracy_missing": null
+      },
+      "symmetric_boosted_small": {
+        "spellF1_with_oracle_state": 0.623463687150838,
+        "spellF1_per_iou": {
+          "0.3": 0.7458100558659218,
+          "0.4": 0.7011173184357542,
+          "0.5": 0.6452513966480447,
+          "0.6": 0.5586592178770949,
+          "0.7": 0.4664804469273743
+        },
+        "team_accuracy_on_live": 0.8988050075872535,
+        "team_macroF1_on_live": 0.8974483367786709,
+        "n_gt_spells": 401,
+        "n_pred_spells": 315,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 1.0,
+        "brier_home_on_live": 0.07274152203433519,
+        "team_accuracy_visible": 0.8988050075872535,
+        "team_accuracy_missing": null
+      },
+      "symmetric_boosted_medium": {
+        "spellF1_with_oracle_state": 0.6637241379310346,
+        "spellF1_per_iou": {
+          "0.3": 0.7696551724137931,
+          "0.4": 0.7337931034482759,
+          "0.5": 0.6924137931034483,
+          "0.6": 0.6013793103448276,
+          "0.7": 0.5213793103448275
+        },
+        "team_accuracy_on_live": 0.9118693095599393,
+        "team_macroF1_on_live": 0.9107162371893587,
+        "n_gt_spells": 401,
+        "n_pred_spells": 324,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 1.0,
+        "brier_home_on_live": 0.06463715926436192,
+        "team_accuracy_visible": 0.9118693095599393,
+        "team_accuracy_missing": null
+      },
+      "symmetric_boosted_large": {
+        "spellF1_with_oracle_state": 0.7002695417789757,
+        "spellF1_per_iou": {
+          "0.3": 0.7978436657681941,
+          "0.4": 0.7654986522911051,
+          "0.5": 0.7196765498652291,
+          "0.6": 0.6549865229110512,
+          "0.7": 0.5633423180592992
+        },
+        "team_accuracy_on_live": 0.9200256069802731,
+        "team_macroF1_on_live": 0.9190581479004691,
+        "n_gt_spells": 401,
+        "n_pred_spells": 341,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 1.0,
+        "brier_home_on_live": 0.05938854405431807,
+        "team_accuracy_visible": 0.9200256069802731,
+        "team_accuracy_missing": null
+      },
+      "temporal_cnn": {
+        "spellF1_with_oracle_state": 0.740050377833753,
+        "spellF1_per_iou": {
+          "0.3": 0.8211586901763224,
+          "0.4": 0.7959697732997482,
+          "0.5": 0.7405541561712846,
+          "0.6": 0.707808564231738,
+          "0.7": 0.6347607052896725
+        },
+        "team_accuracy_on_live": 0.9282648899848255,
+        "team_macroF1_on_live": 0.9273711906909748,
+        "n_gt_spells": 401,
+        "n_pred_spells": 393,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 1.0,
+        "brier_home_on_live": 0.05311696581533279,
+        "team_accuracy_visible": 0.9282648899848255,
+        "team_accuracy_missing": null
+      },
+      "selected_with_2pct_unknown_state": {
+        "spellF1_with_oracle_state": 0.7349306431273643,
+        "spellF1_per_iou": {
+          "0.3": 0.8171500630517023,
+          "0.4": 0.7919293820933165,
+          "0.5": 0.7364438839848676,
+          "0.6": 0.7011349306431274,
+          "0.7": 0.6279949558638083
+        },
+        "team_accuracy_on_live": 0.9098658004552352,
+        "team_macroF1_on_live": 0.9180458057565777,
+        "n_gt_spells": 401,
+        "n_pred_spells": 392,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 1.0,
+        "brier_home_on_live": 0.05311696581533279,
+        "team_accuracy_visible": 0.9098658004552352,
+        "team_accuracy_missing": null
+      }
+    },
+    "J03WQQ/occluded": {
+      "nearest_carried": {
+        "spellF1_with_oracle_state": 0.16632200886262924,
+        "spellF1_per_iou": {
+          "0.3": 0.28360413589364847,
+          "0.4": 0.21861152141802068,
+          "0.5": 0.15066469719350073,
+          "0.6": 0.10635155096011817,
+          "0.7": 0.0723781388478582
+        },
+        "team_accuracy_on_live": 0.6626754552352049,
+        "team_macroF1_on_live": 0.6603645020068316,
+        "n_gt_spells": 401,
+        "n_pred_spells": 953,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.5288908383915023,
+        "team_accuracy_visible": 0.6952681953690628,
+        "team_accuracy_missing": 0.6260852059689473
+      },
+      "nearest_temporal": {
+        "spellF1_with_oracle_state": 0.2885714285714286,
+        "spellF1_per_iou": {
+          "0.3": 0.4542857142857143,
+          "0.4": 0.3657142857142857,
+          "0.5": 0.26285714285714284,
+          "0.6": 0.20857142857142857,
+          "0.7": 0.15142857142857144
+        },
+        "team_accuracy_on_live": 0.6728471168437026,
+        "team_macroF1_on_live": 0.6714029839095864,
+        "n_gt_spells": 401,
+        "n_pred_spells": 299,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.5288908383915023,
+        "brier_home_on_live": 0.2366553273177872,
+        "team_accuracy_visible": 0.7142985228520835,
+        "team_accuracy_missing": 0.6263116837363799
+      },
+      "symmetric_logistic": {
+        "spellF1_with_oracle_state": 0.4909379968203497,
+        "spellF1_per_iou": {
+          "0.3": 0.6136724960254372,
+          "0.4": 0.5691573926868044,
+          "0.5": 0.5151033386327504,
+          "0.6": 0.4260731319554849,
+          "0.7": 0.33068362480127184
+        },
+        "team_accuracy_on_live": 0.8344911798179059,
+        "team_macroF1_on_live": 0.8324390219704516,
+        "n_gt_spells": 401,
+        "n_pred_spells": 228,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.5288908383915023,
+        "brier_home_on_live": 0.1222761275209282,
+        "team_accuracy_visible": 0.864635868468832,
+        "team_accuracy_missing": 0.8006492362666399
+      },
+      "symmetric_boosted_small": {
+        "spellF1_with_oracle_state": 0.5093057607090103,
+        "spellF1_per_iou": {
+          "0.3": 0.6410635155096012,
+          "0.4": 0.5819793205317577,
+          "0.5": 0.5199409158050221,
+          "0.6": 0.4460856720827179,
+          "0.7": 0.35745937961595275
+        },
+        "team_accuracy_on_live": 0.8383559370257967,
+        "team_macroF1_on_live": 0.8365866884312476,
+        "n_gt_spells": 401,
+        "n_pred_spells": 276,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.5288908383915023,
+        "brier_home_on_live": 0.11830418633736664,
+        "team_accuracy_visible": 0.8726604352991281,
+        "team_accuracy_missing": 0.7998439819824353
+      },
+      "symmetric_boosted_medium": {
+        "spellF1_with_oracle_state": 0.5503714710252601,
+        "spellF1_per_iou": {
+          "0.3": 0.6805349182763745,
+          "0.4": 0.6151560178306092,
+          "0.5": 0.5527488855869243,
+          "0.6": 0.4933135215453195,
+          "0.7": 0.4101040118870728
+        },
+        "team_accuracy_on_live": 0.8539098065250379,
+        "team_macroF1_on_live": 0.8521883864038391,
+        "n_gt_spells": 401,
+        "n_pred_spells": 272,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.5288908383915023,
+        "brier_home_on_live": 0.10712028886653259,
+        "team_accuracy_visible": 0.8918924977024634,
+        "team_accuracy_missing": 0.8112685271395857
+      },
+      "symmetric_boosted_large": {
+        "spellF1_with_oracle_state": 0.5428571428571428,
+        "spellF1_per_iou": {
+          "0.3": 0.673469387755102,
+          "0.4": 0.6297376093294461,
+          "0.5": 0.5481049562682215,
+          "0.6": 0.47230320699708456,
+          "0.7": 0.39067055393586003
+        },
+        "team_accuracy_on_live": 0.8565416350531108,
+        "team_macroF1_on_live": 0.8551914741080395,
+        "n_gt_spells": 401,
+        "n_pred_spells": 285,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.5288908383915023,
+        "brier_home_on_live": 0.10164657165485909,
+        "team_accuracy_visible": 0.8987066550108713,
+        "team_accuracy_missing": 0.8092050630363119
+      },
+      "temporal_cnn": {
+        "spellF1_with_oracle_state": 0.6073863636363637,
+        "spellF1_per_iou": {
+          "0.3": 0.7159090909090909,
+          "0.4": 0.6676136363636364,
+          "0.5": 0.625,
+          "0.6": 0.5454545454545454,
+          "0.7": 0.48295454545454547
+        },
+        "team_accuracy_on_live": 0.8838083270106222,
+        "team_macroF1_on_live": 0.8824922331170655,
+        "n_gt_spells": 401,
+        "n_pred_spells": 303,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.5288908383915023,
+        "brier_home_on_live": 0.08269941027942374,
+        "team_accuracy_visible": 0.9158317082464752,
+        "team_accuracy_missing": 0.8478572686781247
+      },
+      "selected_with_2pct_unknown_state": {
+        "spellF1_with_oracle_state": 0.6005698005698006,
+        "spellF1_per_iou": {
+          "0.3": 0.7122507122507122,
+          "0.4": 0.6638176638176638,
+          "0.5": 0.6210826210826211,
+          "0.6": 0.5356125356125356,
+          "0.7": 0.4700854700854701
+        },
+        "team_accuracy_on_live": 0.8653381069802731,
+        "team_macroF1_on_live": 0.8726374481537478,
+        "n_gt_spells": 401,
+        "n_pred_spells": 301,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.5288908383915023,
+        "brier_home_on_live": 0.08269941027942374,
+        "team_accuracy_visible": 0.8970255306749154,
+        "team_accuracy_missing": 0.8297642114799064
+      }
+    },
+    "J03WQQ/severe": {
+      "nearest_carried": {
+        "spellF1_with_oracle_state": 0.1588805166846071,
+        "spellF1_per_iou": {
+          "0.3": 0.25618945102260493,
+          "0.4": 0.20452099031216361,
+          "0.5": 0.15069967707212056,
+          "0.6": 0.10979547900968784,
+          "0.7": 0.07319698600645856
+        },
+        "team_accuracy_on_live": 0.6316151365705615,
+        "team_macroF1_on_live": 0.6303698783856434,
+        "n_gt_spells": 401,
+        "n_pred_spells": 528,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.22182046661608498,
+        "team_accuracy_visible": 0.7094222649778206,
+        "team_accuracy_missing": 0.609436175561006
+      },
+      "nearest_temporal": {
+        "spellF1_with_oracle_state": 0.19752212389380533,
+        "spellF1_per_iou": {
+          "0.3": 0.3185840707964602,
+          "0.4": 0.24424778761061947,
+          "0.5": 0.1911504424778761,
+          "0.6": 0.1415929203539823,
+          "0.7": 0.0920353982300885
+        },
+        "team_accuracy_on_live": 0.6241701441578149,
+        "team_macroF1_on_live": 0.6240794774474689,
+        "n_gt_spells": 401,
+        "n_pred_spells": 164,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.22182046661608498,
+        "brier_home_on_live": 0.24203166614065671,
+        "team_accuracy_visible": 0.7429854096520763,
+        "team_accuracy_missing": 0.5903017930866379
+      },
+      "symmetric_logistic": {
+        "spellF1_with_oracle_state": 0.45751633986928103,
+        "spellF1_per_iou": {
+          "0.3": 0.5882352941176471,
+          "0.4": 0.5392156862745098,
+          "0.5": 0.4738562091503268,
+          "0.6": 0.3790849673202614,
+          "0.7": 0.30718954248366015
+        },
+        "team_accuracy_on_live": 0.8275085356600911,
+        "team_macroF1_on_live": 0.8251989262452843,
+        "n_gt_spells": 401,
+        "n_pred_spells": 211,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.22182046661608498,
+        "brier_home_on_live": 0.12943669947269826,
+        "team_accuracy_visible": 0.8652664208219764,
+        "team_accuracy_missing": 0.8167456315412623
+      },
+      "symmetric_boosted_small": {
+        "spellF1_with_oracle_state": 0.4778115501519757,
+        "spellF1_per_iou": {
+          "0.3": 0.6170212765957447,
+          "0.4": 0.5562310030395137,
+          "0.5": 0.48328267477203646,
+          "0.6": 0.40425531914893614,
+          "0.7": 0.3282674772036474
+        },
+        "team_accuracy_on_live": 0.8307449734446131,
+        "team_macroF1_on_live": 0.828330835610494,
+        "n_gt_spells": 401,
+        "n_pred_spells": 257,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.22182046661608498,
+        "brier_home_on_live": 0.12357362758203286,
+        "team_accuracy_visible": 0.8689006466784245,
+        "team_accuracy_missing": 0.819868679636203
+      },
+      "symmetric_boosted_medium": {
+        "spellF1_with_oracle_state": 0.4849230769230769,
+        "spellF1_per_iou": {
+          "0.3": 0.6092307692307692,
+          "0.4": 0.556923076923077,
+          "0.5": 0.49538461538461537,
+          "0.6": 0.42153846153846153,
+          "0.7": 0.3415384615384615
+        },
+        "team_accuracy_on_live": 0.8421258535660091,
+        "team_macroF1_on_live": 0.8401144813508359,
+        "n_gt_spells": 401,
+        "n_pred_spells": 249,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.22182046661608498,
+        "brier_home_on_live": 0.11710909276774034,
+        "team_accuracy_visible": 0.8829565496232162,
+        "team_accuracy_missing": 0.8304870431590012
+      },
+      "symmetric_boosted_large": {
+        "spellF1_with_oracle_state": 0.5201219512195122,
+        "spellF1_per_iou": {
+          "0.3": 0.6402439024390244,
+          "0.4": 0.5975609756097561,
+          "0.5": 0.524390243902439,
+          "0.6": 0.4573170731707317,
+          "0.7": 0.38109756097560976
+        },
+        "team_accuracy_on_live": 0.846429248861912,
+        "team_macroF1_on_live": 0.8448032662496687,
+        "n_gt_spells": 401,
+        "n_pred_spells": 255,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.22182046661608498,
+        "brier_home_on_live": 0.11344670859753339,
+        "team_accuracy_visible": 0.8957832291165625,
+        "team_accuracy_missing": 0.8323608720159656
+      },
+      "temporal_cnn": {
+        "spellF1_with_oracle_state": 0.5930029154518951,
+        "spellF1_per_iou": {
+          "0.3": 0.6909620991253644,
+          "0.4": 0.6559766763848397,
+          "0.5": 0.6064139941690962,
+          "0.6": 0.5481049562682215,
+          "0.7": 0.46355685131195334
+        },
+        "team_accuracy_on_live": 0.8726052731411229,
+        "team_macroF1_on_live": 0.8711547531993216,
+        "n_gt_spells": 401,
+        "n_pred_spells": 285,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.22182046661608498,
+        "brier_home_on_live": 0.09347433955406288,
+        "team_accuracy_visible": 0.8944471166693388,
+        "team_accuracy_missing": 0.8663792446793924
+      },
+      "selected_with_2pct_unknown_state": {
+        "spellF1_with_oracle_state": 0.5912536443148688,
+        "spellF1_per_iou": {
+          "0.3": 0.6909620991253644,
+          "0.4": 0.6559766763848397,
+          "0.5": 0.6005830903790087,
+          "0.6": 0.5481049562682215,
+          "0.7": 0.4606413994169096
+        },
+        "team_accuracy_on_live": 0.8549174886191199,
+        "team_macroF1_on_live": 0.8620231495636699,
+        "n_gt_spells": 401,
+        "n_pred_spells": 285,
+        "live_frames": 84352,
+        "ball_seen_fraction_live": 0.22182046661608498,
+        "brier_home_on_live": 0.09347433955406288,
+        "team_accuracy_visible": 0.873122762011651,
+        "team_accuracy_missing": 0.849728066300026
+      }
+    }
+  },
+  "summary": {
+    "nearest_carried": {
+      "mean_spellF1": 0.14591647336220925,
+      "mean_team_accuracy": 0.6861208586241782
+    },
+    "nearest_temporal": {
+      "mean_spellF1": 0.3183213586270706,
+      "mean_team_accuracy": 0.7054999683864441
+    },
+    "symmetric_logistic": {
+      "mean_spellF1": 0.4960659754777401,
+      "mean_team_accuracy": 0.8480929122407689
+    },
+    "symmetric_boosted_small": {
+      "mean_spellF1": 0.5368603326706081,
+      "mean_team_accuracy": 0.8559686393525544
+    },
+    "symmetric_boosted_medium": {
+      "mean_spellF1": 0.5663395619597905,
+      "mean_team_accuracy": 0.8693016565503288
+    },
+    "symmetric_boosted_large": {
+      "mean_spellF1": 0.5877495452852103,
+      "mean_team_accuracy": 0.8743321636317654
+    },
+    "temporal_cnn": {
+      "mean_spellF1": 0.646813218974004,
+      "mean_team_accuracy": 0.8948928300455234
+    }
+  },
+  "inference_and_decode_s": {
+    "J03WQQ/clean": {
+      "nearest_carried": 0.0023621649997949135,
+      "nearest_temporal": 0.1988053979985125,
+      "symmetric_logistic": 0.3172348520020023,
+      "symmetric_boosted_small": 0.4909302820015,
+      "symmetric_boosted_medium": 0.9825993540034688,
+      "symmetric_boosted_large": 2.5377245519994176,
+      "temporal_cnn": 9.376678638000158
+    },
+    "J03WQQ/occluded": {
+      "nearest_carried": 0.0009557010016578715,
+      "nearest_temporal": 0.18119772700083558,
+      "symmetric_logistic": 0.2789005839986203,
+      "symmetric_boosted_small": 0.4878783989988733,
+      "symmetric_boosted_medium": 0.9937036580013228,
+      "symmetric_boosted_large": 2.3718134720002126,
+      "temporal_cnn": 8.898734800000966
+    },
+    "J03WQQ/severe": {
+      "nearest_carried": 0.00095347200112883,
+      "nearest_temporal": 0.1982230920002621,
+      "symmetric_logistic": 0.2867807959992206,
+      "symmetric_boosted_small": 0.5139564629971574,
+      "symmetric_boosted_medium": 0.9784515409992309,
+      "symmetric_boosted_large": 2.3927373039987287,
+      "temporal_cnn": 8.452457762999984
+    }
+  },
+  "runtime_s": 73.2174217790016,
+  "limitations": [
+    "One held-out match; synthetic occlusions are not actual Metrica errors.",
+    "Final selection remains the validation winner regardless of this test.",
+    "Real Smart Tagging and actual game-state predictions are not part of this test."
+  ]
+}
